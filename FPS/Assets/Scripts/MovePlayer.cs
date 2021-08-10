@@ -11,14 +11,18 @@ public class MovePlayer : MonoBehaviour
     public Transform groundCheck;
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
-    public float deathDistance = 3;
 
-    bool isGrounded;
+    private bool isGrounded = false;
     Vector3 velocity;
+
+    void Start()
+    {
+        
+    }
     // Update is called once per frame
     void Update()
     {
-        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask); 
 
         if(isGrounded && velocity.y < 0)
         {
@@ -39,17 +43,6 @@ public class MovePlayer : MonoBehaviour
         if(Input.GetButtonDown("Jump") && isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpForce * -2f * gravity);
-        }
-
-        if(!isGrounded)
-        {
-            RaycastHit hit;
-            Physics.Raycast(groundCheck.position, -transform.up, out hit, 100f);
-
-            if(hit.distance > deathDistance)
-            {
-                FindObjectOfType<GameController>().OnFall();
-            }
         }
     }
 

@@ -1034,7 +1034,7 @@ MonoBehaviour:
   healthIV: {fileID: 1545491771}
   healthV: {fileID: 1653279255}
   tesseractCount: 0
-  portal: {fileID: 0}
+  portal: {fileID: 903209182}
 --- !u!4 &313505122
 Transform:
   m_ObjectHideFlags: 0

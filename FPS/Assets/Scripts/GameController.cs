@@ -14,7 +14,6 @@ public class GameController : MonoBehaviour
     public Image healthIV;
     public Image healthV;
     public int tesseractCount = 0;
-    public static GameController instance = null;
     public GameObject portal;
 
     private int health = 5;
@@ -22,16 +21,6 @@ public class GameController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if(instance == null)
-        {
-            instance = this;
-        }
-        else if(instance != this)
-        {
-            Destroy(gameObject);
-        }    
-        DontDestroyOnLoad(gameObject);    
-
         missaoConcluida.enabled = false;
     }
 
@@ -51,18 +40,7 @@ public class GameController : MonoBehaviour
                 Invoke("NextMission", 3f);          
             }
             break;
-            case 2: missaoTxt.text = "Alcance o portal no topo";
-            break;
-            case 3: missaoTxt.text = "Destrua todas as réplicas do Tesseract: " + tesseractCount + " de 10";
-            if(tesseractCount == 10)
-            {
-                tesseractCount = 0;
-                missaoTxt.enabled = false;
-                missaoConcluida.enabled = true;            
-                Invoke("NextMission", 3f);            
-            }
-            break;
-            case 4: missaoTxt.text = "Encontre o portal";
+            case 2: missaoTxt.text = "Atravesse o portal";
             break;
             default: missaoTxt.text = "MISSÃO";
             break;
@@ -109,7 +87,6 @@ public class GameController : MonoBehaviour
         missaoTxt.enabled = false;
         missaoConcluida.enabled = true; 
         portal.SetActive(true);           
-        NextMission();
         SceneManager.LoadScene("Fase2");
     }
 }
