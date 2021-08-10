@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Scene
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -122,7 +122,7 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 21
+  controlID: 112
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -147,7 +147,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 22
+  controlID: 113
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -172,7 +172,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 23
+  controlID: 114
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -397,9 +397,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 4efbffff
+      m_SelectedIDs: 68faffff
+      m_LastClickedID: -1432
+      m_ExpandedIDs: 52fbffff183d0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -459,9 +459,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -25.200005, y: 45.11371, z: -16.769625}
+    m_Target: {x: -25.970856, y: 5.182682, z: 25.47927}
     speed: 2
-    m_Value: {x: -25.200005, y: 45.11371, z: -16.769625}
+    m_Value: {x: -25.970856, y: 5.182713, z: 25.479256}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -510,15 +510,15 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: -0.38802594, y: -0.45517048, z: 0.23006772, w: -0.7676819}
     speed: 2
-    m_Value: {x: -0.38755828, y: -0.4532058, z: 0.2282218, w: -0.769622}
+    m_Value: {x: 0.38802594, y: 0.45517048, z: -0.23006772, w: 0.7676819}
   m_Size:
-    m_Target: 76.28855
+    m_Target: 6.977488
     speed: 2
-    m_Value: 76.28855
+    m_Value: 7.30627
   m_Ortho:
-    m_Target: 1
+    m_Target: 0
     speed: 2
-    m_Value: 1
+    m_Value: 0
   m_CameraSettings:
     m_Speed: 1
     m_SpeedNormalized: 0.5
@@ -610,7 +610,7 @@ MonoBehaviour:
   m_LastFolders:
   - Assets
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\esdra\Documents\Projetos Games\FPS
+  m_LastProjectPath: C:\Users\esdra\Desktop\ArquivosGit\FPS
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
@@ -672,7 +672,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c623000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
