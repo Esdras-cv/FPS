@@ -11,10 +11,10 @@ public class MovePlayer : MonoBehaviour
     public Transform groundCheck;
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
+    public float distMaxQueda = 3f;
 
-    private bool isGrounded = false;
     Vector3 velocity;
-
+    private float ultimaPosY, distQueda;
     void Start()
     {
         
@@ -22,9 +22,19 @@ public class MovePlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask); 
+        ultimaPosY = controller.transform.position.y;
 
-        if(isGrounded && velocity.y < 0)
+        if(ultimaPosY > controller.transform.position.y && controller.velocity.y < 0)
+        {
+            distQueda += ultimaPosY - controller.transform.position.y;
+        }
+
+        if(distQueda >= distMaxQueda && controller.isGrounded)
+        {
+            FindObjectOfType<GameController>().OnFall();
+        }
+
+        if(controller.isGrounded && velocity.y < 0)
         {
             velocity.y = -2f;
         }
@@ -40,7 +50,7 @@ public class MovePlayer : MonoBehaviour
 
         controller.Move(velocity * Time.deltaTime);
 
-        if(Input.GetButtonDown("Jump") && isGrounded)
+        if(Input.GetButtonDown("Jump") && controller.isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpForce * -2f * gravity);
         }
